@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
+	"sitebeego/models"
 )
 
 type HelloController struct {
@@ -9,7 +10,8 @@ type HelloController struct {
 }
 
 func (c *HelloController) Hello() {
-	c.Data["Website"] = "beego.me1"
+	c.Data["Website"] = models.Hello()
+	#"beego.me1"
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.TplName = "index.tpl"
 }
